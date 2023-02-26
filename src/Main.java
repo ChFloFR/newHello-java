@@ -98,6 +98,19 @@ public class Main {
 
             System.out.printf(phraseIntro, annee, nbPlanetesEx);
         }
-    }}
+
+
+        Voiture voitureDeMichel = new Voiture();
+        voitureDeMichel.nbPortes=3;
+        voitureDeMichel.automatic=true;
+        voitureDeMichel.couleur="jaune";
+
+        System.out.println(voitureDeMichel.couleur);
+
+
+
+
+    }
+}
 
 

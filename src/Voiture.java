@@ -4,9 +4,7 @@ public class Voiture {
 
     //un booleen par défaut est à false
     boolean automatic;
-    String modele;
 
-    //char a par défaut \u0000
-    char premiereLettrePlaque;
+
 
 }

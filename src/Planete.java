@@ -26,11 +26,11 @@ public class Planete {
         Mars.diametre = 6792;
         System.out.println("La planète " + Mars.nom + " est de type " + Mars.matiere + " et possède un diamètre de " + Mars.diametre + " kilomètres.");
 
-        Planete Venus = new Planete();
-        Venus.nom = "Venus";
-        Venus.matiere = "tellurique";
-        Venus.diametre = 12100;
-        System.out.println("La planète " + Venus.nom + " est de type " + Venus.matiere + " et possède un diamètre de " + Venus.diametre + " kilomètres.");
+        Planete venus = new Planete();
+        venus.nom = "Venus";
+        venus.matiere = "tellurique";
+        venus.diametre = 12100;
+        System.out.println("La planète " + venus.nom + " est de type " + venus.matiere + " et possède un diamètre de " + venus.diametre + " kilomètres.");
 
         Planete Jupiter = new Planete();
         Jupiter.nom = "Jupiter";
@@ -62,6 +62,19 @@ public class Planete {
         Pluton.diametre = 2300;
         System.out.println("La planète " + Pluton.nom + " est de type " + Pluton.matiere + " et possède un diamètre de " + Pluton.diametre + " kilomètres.");
 
+
+    }
+    void revolution(){
+        System.out.printf("Je suis la planète %s et je tourne autour de mon étoile", nom);
+    }
+    void rotation(){
+        System.out.printf("Je suis la planète %s et je tourne sur moi-même", nom);
     }
 
+    int revolution2(int angle){
+        return angle/360;
+    }
+    int rotation2(int angle){
+        return angle/360;
+    }
 }

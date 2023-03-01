@@ -107,6 +107,45 @@ public class Main {
         System.out.println(voitureDeMichel.couleur);
         voitureDeMichel.klaxonner();
 
+        //ici j'appelle une méthode qui retourne un résultat, je place ce dernier dans une variable typée
+        // comme nécessaire -> la méthode est dans la class Voiture
+
+        int nouvelleVitesse= voitureDeMichel.accelerer();
+        System.out.println("Nouvelle vitesse de michel :"+nouvelleVitesse);
+
+        int nouveauRapport=voitureDeMichel.passerRapport(true);
+        System.out.println("Le nouveau rapport est : " + nouveauRapport);
+
+        voitureDeMichel.passerRapport(true);
+        System.out.println("Je suis en "+nouveauRapport+" vitesse");
+        voitureDeMichel.passerRapport(true);
+        System.out.println("Je suis en "+nouveauRapport+" vitesse");
+
+        nouveauRapport= voitureDeMichel.passerRapport(false);
+        System.out.println("Le dernier rapport enclenché est "+nouveauRapport);
+
+        voitureDeMichel.tourner(false, 45);
+        Planete neptune = new Planete();
+        neptune.nom = "Neptune";
+        neptune.diametre = 49532;
+        neptune.matiere = "Gazeuse";
+
+        Planete mars = new Planete();
+        mars.nom = "Mars";
+        mars.matiere = "tellurique";
+        mars.diametre = 6792;
+
+        Planete venus = new Planete();
+        venus.nom = "Venus";
+
+        //appel de la méthode construite dans la class Planete
+        neptune.revolution();
+        mars.rotation();
+
+        System.out.println("Neptune a effectué " +neptune.revolution2(-3542)+ " tours autour de son étoile");
+        System.out.println("Mars a effectué "+mars.rotation2(-684)+" tours sur elle-même");
+        System.out.println("Venus a effectué "+venus.rotation2(1250)+" tours sur elle-même");
+
 
     }
 }

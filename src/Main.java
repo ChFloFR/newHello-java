@@ -110,8 +110,8 @@ public class Main {
         //ici j'appelle une méthode qui retourne un résultat, je place ce dernier dans une variable typée
         // comme nécessaire -> la méthode est dans la class Voiture
 
-        int nouvelleVitesse= voitureDeMichel.accelerer();
-        System.out.println("Nouvelle vitesse de michel :"+nouvelleVitesse);
+        //int nouvelleVitesse= voitureDeMichel.accelerer();
+        //System.out.println("Nouvelle vitesse de michel :"+nouvelleVitesse);
 
         int nouveauRapport=voitureDeMichel.passerRapport(true);
         System.out.println("Le nouveau rapport est : " + nouveauRapport);
@@ -145,6 +145,35 @@ public class Main {
         System.out.println("Neptune a effectué " +neptune.revolution2(-3542)+ " tours autour de son étoile");
         System.out.println("Mars a effectué "+mars.rotation2(-684)+" tours sur elle-même");
         System.out.println("Venus a effectué "+venus.rotation2(1250)+" tours sur elle-même");
+
+        Voiture voitureDeJerome=new Voiture();
+        boolean egauxOuNon=voitureDeMichel==voitureDeJerome;
+        System.out.println(egauxOuNon);
+
+        String chaine1="le ciel bleu";
+        String chaine2="le ciel bleu";
+        boolean egauxOuPas=chaine1==chaine2;
+        System.out.println(egauxOuPas);
+        System.out.println("Ici les deux chaines sont égales - contrairement aux deux objets voitureDeJerome et voitureDeMichel - car " +
+                "nous n'avons pas instancié la chaine en appelant le mot clef new ...ceci est propre à la chaine de caractère. Ces deux chaines utilisent le même emplacement mémoire et sont donc égales, ");
+
+
+        String chaine3=new String("le ciel bleu");
+
+        boolean egauxOuPas2=chaine1==chaine3;
+        System.out.println(egauxOuPas2);
+        System.out.println("le rendu est false car chaine3 est un objet instancié");
+        System.out.println("méthode equals plutôt que ==  //equalsIgnoreCase est une méthode pour ignorer la case");
+
+        boolean egauxAvecEquals=chaine1.equals(chaine2);
+        System.out.println(egauxAvecEquals);
+
+        //exercice planète
+
+        mars.accueillirVaisseau(8);
+        mars.accueillirVaisseau("FREGATE");
+        System.out.println("Le nombre d'êtres humains ayant déjà séjourné sur mars est de " + mars.totalVisiteurs);
+
 
 
     }

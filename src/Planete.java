@@ -3,6 +3,8 @@ public class Planete {
     String nom;
     String matiere;
     long diametre;
+    int angle;
+    int totalVisiteurs;
 
 
     public static void main(String... args) {
@@ -24,12 +26,14 @@ public class Planete {
         Mars.nom = "Mars";
         Mars.matiere = "tellurique";
         Mars.diametre = 6792;
+        Mars.angle = -684;
         System.out.println("La planète " + Mars.nom + " est de type " + Mars.matiere + " et possède un diamètre de " + Mars.diametre + " kilomètres.");
 
         Planete venus = new Planete();
         venus.nom = "Venus";
         venus.matiere = "tellurique";
         venus.diametre = 12100;
+        venus.angle= 1250;
         System.out.println("La planète " + venus.nom + " est de type " + venus.matiere + " et possède un diamètre de " + venus.diametre + " kilomètres.");
 
         Planete Jupiter = new Planete();
@@ -54,6 +58,7 @@ public class Planete {
         Neptune.nom = "Neptune";
         Neptune.matiere = "gazeuse";
         Neptune.diametre = 49532;
+        Neptune.angle = -3542;
         System.out.println("La planète " + Neptune.nom + " est de type " + Neptune.matiere + " et possède un diamètre de " + Neptune.diametre + " kilomètres.");
 
         Planete Pluton = new Planete();
@@ -76,5 +81,31 @@ public class Planete {
     }
     int rotation2(int angle){
         return angle/360;
+    }
+
+    //code corrigé :
+    int revolution(int degres){
+        System.out.println("Je suis la planète "+nom+" et je tourne autour de mon étoile de "+degres+" degrés.");
+        return degres/360;
+    }
+
+    int rotation(int degres){
+        System.out.println("Je suis la planète "+nom+" et je tourne sur moi-même de "+degres+" degrés.");
+        return degres/360;
+    }
+    int totalPlaneteVisiteurs=0;
+    void accueillirVaisseau(int nbHumains){
+        totalVisiteurs = totalPlaneteVisiteurs+nbHumains;
+        System.out.println(totalPlaneteVisiteurs);
+    }
+    void accueillirVaisseau(String typeVaisseau){
+        if(typeVaisseau.equals("CHASSEUR")) {
+            totalVisiteurs = totalVisiteurs + 3;
+        }else if(typeVaisseau.equals("FREGATE")){
+            totalVisiteurs=totalVisiteurs+12;}
+        else if (typeVaisseau.equals("CROISEUR")){
+            totalVisiteurs=totalVisiteurs+50;
+
+        }
     }
 }

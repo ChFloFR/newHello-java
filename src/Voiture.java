@@ -4,6 +4,7 @@ public class Voiture {
     //un booleen par défaut est à false
     boolean automatic;
     int rapportCourant;
+    int vitesseCourante;
 
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
     void klaxonner(){
@@ -11,9 +12,9 @@ public class Voiture {
     }
 
     //accelérer est aussi une méthode mais typée (int)
-    int accelerer(){
+    int accelerer(int vitesseEnPlus){
         System.out.println("J'accélère");
-        return 100;
+        return vitesseCourante+vitesseEnPlus;
     }
 
     //nouvelle méthode typée avec paramètres
@@ -33,5 +34,10 @@ public class Voiture {
             droiteOuGauche="gauche";
         }
         System.out.println("La voiture va tourner à "+droiteOuGauche+" d'un angle de " +angle+ " degrés");
+    }
+    //ajout d'une surcharge sur la méthode tourner, permet de laisser le choix
+
+    void tourner(String droiteOuGauche, int angle){
+        System.out.println("La voiture va tourner à "+droiteOuGauche+" d'un angle de "+angle);
     }
 }

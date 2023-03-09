@@ -4,7 +4,7 @@ public class Voiture {
     //un booleen par défaut est à false
     boolean automatic;
     int rapportCourant;
-    int vitesseCourante;
+    int vitesse;
 
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
     void klaxonner(){
@@ -12,9 +12,10 @@ public class Voiture {
     }
 
     //accelérer est aussi une méthode mais typée (int)
-    int accelerer(int vitesseEnPlus){
+    int accelerer(int vitesse){
         System.out.println("J'accélère");
-        return vitesseCourante+vitesseEnPlus;
+        this.vitesse = this.vitesse+vitesse;
+        return this.vitesse;
     }
 
     //nouvelle méthode typée avec paramètres

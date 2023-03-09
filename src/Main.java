@@ -174,6 +174,15 @@ public class Main {
         mars.accueillirVaisseau("FREGATE");
         System.out.println("Le nombre d'êtres humains ayant déjà séjourné sur mars est de " + mars.totalVisiteurs);
 
+        // mot clef "this"
+        System.out.println("Usage du mot clé this");
+        System.out.println("si le paramètre reçu dans la méthode a le même nom que la propriété que l'objet que l'on manipule, c'est le paramètre de la méthode qui a la priorité");
+        System.out.println("int accelerer(int vitesse)" +
+                "this.vitesse=this.vitesse+vitesse;" +
+                "this.vitesse" +
+                "ICI this.vitesse est la propriété de l'objet courant(voitureDeMichel ");
+        int nouvelleVitesse=voitureDeMichel.accelerer(50);
+        System.out.println("La nouvelle vitesse est de "+nouvelleVitesse);
 
 
     }

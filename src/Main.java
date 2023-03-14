@@ -184,7 +184,22 @@ public class Main {
         int nouvelleVitesse=voitureDeMichel.accelerer(50);
         System.out.println("La nouvelle vitesse est de "+nouvelleVitesse);
 
+        Voiture voitureDeRoger= new Voiture();
+        Moteur moteur= new Moteur();
+        moteur.carburation="Diesel";
+        moteur.nbCylindres=6;
+        voitureDeRoger.moteur=moteur;
 
+        System.out.println("le nombre de cylindres de la voiture de Roger est "+voitureDeRoger.moteur.nbCylindres);
+
+        voitureDeMichel.moteur=moteur;
+        System.out.println("le moteur de  Roger et Michel sont le même = c'est la référence (son emplacement en mémoire dit copie par référence) du moteur créé :"+ voitureDeMichel.moteur);
+        System.out.println(voitureDeRoger.moteur);
+
+        moteur.nbCylindres=8;
+        System.out.println("Ici, le nbCylindre a été changé et comme la référence moteur est identique pour les deux voitures, alors elles ont toutes deux 8 cylindres");
+        System.out.println(voitureDeRoger.moteur.nbCylindres);
+        System.out.println(voitureDeMichel.moteur.nbCylindres);
     }
 }
 

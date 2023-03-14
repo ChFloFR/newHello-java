@@ -5,8 +5,7 @@ public class Planete {
     long diametre;
     int angle;
     int totalVisiteurs;
-
-
+    Atmosphere atmosphere;
     public static void main(String... args) {
 
 
@@ -52,6 +51,7 @@ public class Planete {
         Uranus.nom = "Uranus";
         Uranus.matiere = "gazeuse";
         Uranus.diametre = 51118;
+
         System.out.println("La planète " + Uranus.nom + " est de type " + Uranus.matiere + " et possède un diamètre de " + Uranus.diametre + " kilomètres.");
 
         Planete Neptune = new Planete();

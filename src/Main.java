@@ -219,6 +219,15 @@ public class Main {
         System.out.println("A" + atmosphereUranus.txSodium + " % d'sodium");
 
 
+
+        Passager passager=new Passager();
+        passager.nom="Dupont";
+        passager.prenom="Antoine";
+
+        Ville toulouse=new Ville();
+        toulouse.nomVille="Toulouse";
+        Ville destination=voitureDeMichel.transporter(passager, toulouse);
+        System.out.println("L'illustre passager est arrivé à "+destination.nomVille);
     }
 
 }

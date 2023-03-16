@@ -6,6 +6,8 @@ public class Planete {
     int angle;
     int totalVisiteurs;
     Atmosphere atmosphere;
+    Vaisseau vaisseauActuellementAccoste;
+
     public static void main(String... args) {
 
 
@@ -32,7 +34,7 @@ public class Planete {
         venus.nom = "Venus";
         venus.matiere = "tellurique";
         venus.diametre = 12100;
-        venus.angle= 1250;
+        venus.angle = 1250;
         System.out.println("La planète " + venus.nom + " est de type " + venus.matiere + " et possède un diamètre de " + venus.diametre + " kilomètres.");
 
         Planete Jupiter = new Planete();
@@ -69,43 +71,72 @@ public class Planete {
 
 
     }
-    void revolution(){
+
+    void revolution() {
         System.out.printf("Je suis la planète %s et je tourne autour de mon étoile", nom);
     }
-    void rotation(){
+
+    void rotation() {
         System.out.printf("Je suis la planète %s et je tourne sur moi-même", nom);
     }
 
-    int revolution2(int angle){
-        return angle/360;
+    int revolution2(int angle) {
+        return angle / 360;
     }
-    int rotation2(int angle){
-        return angle/360;
+
+    int rotation2(int angle) {
+        return angle / 360;
     }
 
     //code corrigé :
-    int revolution(int degres){
-        System.out.println("Je suis la planète "+nom+" et je tourne autour de mon étoile de "+degres+" degrés.");
-        return degres/360;
+    int revolution(int degres) {
+        System.out.println("Je suis la planète " + nom + " et je tourne autour de mon étoile de " + degres + " degrés.");
+        return degres / 360;
     }
 
-    int rotation(int degres){
-        System.out.println("Je suis la planète "+nom+" et je tourne sur moi-même de "+degres+" degrés.");
-        return degres/360;
+    int rotation(int degres) {
+        System.out.println("Je suis la planète " + nom + " et je tourne sur moi-même de " + degres + " degrés.");
+        return degres / 360;
     }
-    int totalPlaneteVisiteurs=0;
-    void accueillirVaisseau(int nbHumains){
-        totalVisiteurs = totalPlaneteVisiteurs+nbHumains;
+
+    int totalPlaneteVisiteurs = 0;
+
+
+    void accueillirVaisseau(int nbHumains) {
+        totalVisiteurs = totalPlaneteVisiteurs + nbHumains;
         System.out.println(totalPlaneteVisiteurs);
     }
-    void accueillirVaisseau(String typeVaisseau){
-        if(typeVaisseau.equals("CHASSEUR")) {
-            totalVisiteurs = totalVisiteurs + 3;
-        }else if(typeVaisseau.equals("FREGATE")){
-            totalVisiteurs=totalVisiteurs+12;}
-        else if (typeVaisseau.equals("CROISEUR")){
-            totalVisiteurs=totalVisiteurs+50;
 
+    void accueillirVaisseau(String typeVaisseau) {
+        if (typeVaisseau.equals("CHASSEUR")) {
+            totalVisiteurs = totalVisiteurs + 3;
+        } else if (typeVaisseau.equals("FREGATE")) {
+            totalVisiteurs = totalVisiteurs + 12;
+        } else if (typeVaisseau.equals("CROISEUR")) {
+            totalVisiteurs = totalVisiteurs + 50;
+
+        }
+    }
+
+    Vaisseau accueillYrVaisseau(Vaisseau vaisseau) {
+        totalVisiteurs = totalVisiteurs + vaisseau.nbrePassagers;
+        if (vaisseauActuellementAccoste == null) {
+            System.out.println("Aucun vaisseau ne s'en va");
+        } else {
+            System.out.println("Un vaisseau de type " + vaisseauActuellementAccoste.type + " doit s'en aller");
+        }
+        Vaisseau vaisseauPrecedent = vaisseauActuellementAccoste;
+        vaisseauActuellementAccoste = vaisseau;
+        return vaisseauPrecedent;
+    }
+
+    Vaisseau vaisseau(String typeVaisseau, int nbrePassagers) {
+        if (typeVaisseau.equals("CHASSEUR")) {
+            nbrePassagers = 3;
+        } else if (typeVaisseau.equals("FREGATE")) {
+            nbrePassagers = 12;
+        } else if (typeVaisseau.equals("CROISEUR")) {
+            nbrePassagers = 50;
         }
     }
 }

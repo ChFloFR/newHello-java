@@ -5,6 +5,7 @@ public class Voiture {
     boolean automatic;
     int rapportCourant;
     int vitesse;
+    Moteur moteur;
 
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
     void klaxonner(){
@@ -40,5 +41,13 @@ public class Voiture {
 
     void tourner(String droiteOuGauche, int angle){
         System.out.println("La voiture va tourner à "+droiteOuGauche+" d'un angle de "+angle);
+    }
+    Ville transporter(Passager passager, Ville villeDeDepart){
+        System.out.println("je transporte un passager qui s'appelle "+passager.prenom+" "+passager.nom);
+        System.out.println("Le passager est parti de "+villeDeDepart.nomVille);
+
+        Ville villeDestination=new Ville();
+        villeDestination.nomVille="Lille";
+        return villeDestination;
     }
 }

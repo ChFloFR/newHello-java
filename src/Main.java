@@ -228,6 +228,17 @@ public class Main {
         toulouse.nomVille="Toulouse";
         Ville destination=voitureDeMichel.transporter(passager, toulouse);
         System.out.println("L'illustre passager est arrivé à "+destination.nomVille);
+
+        Vaisseau nouveauVaisseau=new Vaisseau();
+        nouveauVaisseau.type="Fregate";
+        nouveauVaisseau.nbrePassagers=9;
+        mars.accueillYrVaisseau(nouveauVaisseau);
+
+        Vaisseau autreVaisseau=new Vaisseau();
+        autreVaisseau.type="Croiseur";
+        autreVaisseau.nbrePassagers=42;
+
+        mars.accueillYrVaisseau(autreVaisseau);
     }
 
 }

@@ -229,6 +229,7 @@ public class Main {
         Ville destination=voitureDeMichel.transporter(passager, toulouse);
         System.out.println("L'illustre passager est arrivé à "+destination.nomVille);
 
+        Vaisseau vaisseau = new Vaisseau();
         Vaisseau nouveauVaisseau=new Vaisseau();
         nouveauVaisseau.type="Fregate";
         nouveauVaisseau.nbrePassagers=9;
@@ -239,6 +240,16 @@ public class Main {
         autreVaisseau.nbrePassagers=42;
 
         mars.accueillYrVaisseau(autreVaisseau);
+
+        //je peux redéfinir ici une propriété qui s'appliquera à toutes les instances :
+        //Voiture.nbRoues=5;
+
+        System.out.println("Le nombre de roues de la voiture de Michel est "+voitureDeMichel.nbRoues);
+        System.out.println("Il paraît qu'en général, une voiture a "+Voiture.nbRoues);
+
+        System.out.println("La forme de la planète Mars est "+mars.forme);
+        System.out.println("La forme d'une planète est "+Planete.forme);
+
     }
 
 }

@@ -7,7 +7,7 @@ public class Planete {
     int totalVisiteurs;
     Atmosphere atmosphere;
     Vaisseau vaisseauActuellementAccoste;
-
+    static String forme="Sphérique";
     public static void main(String... args) {
 
 
@@ -28,6 +28,7 @@ public class Planete {
         Mars.matiere = "tellurique";
         Mars.diametre = 6792;
         Mars.angle = -684;
+        Mars.forme="";
         System.out.println("La planète " + Mars.nom + " est de type " + Mars.matiere + " et possède un diamètre de " + Mars.diametre + " kilomètres.");
 
         Planete venus = new Planete();
@@ -118,12 +119,14 @@ public class Planete {
         }
     }
 
+    // cette méthode fusionne les deux précédentes
     Vaisseau accueillYrVaisseau(Vaisseau vaisseau) {
-        totalVisiteurs = totalVisiteurs + vaisseau.nbrePassagers;
+        totalVisiteurs =totalVisiteurs+vaisseau.nbrePassagers;
         if (vaisseauActuellementAccoste == null) {
             System.out.println("Aucun vaisseau ne s'en va");
-        } else {
-            System.out.println("Un vaisseau de type " + vaisseauActuellementAccoste.type + " doit s'en aller");
+        }
+        else {
+            System.out.println("Un vaisseau de type "+vaisseauActuellementAccoste.type+" doit s'en aller");
         }
         Vaisseau vaisseauPrecedent = vaisseauActuellementAccoste;
         vaisseauActuellementAccoste = vaisseau;
@@ -138,5 +141,6 @@ public class Planete {
         } else if (typeVaisseau.equals("CROISEUR")) {
             nbrePassagers = 50;
         }
+        return new Vaisseau();
     }
 }

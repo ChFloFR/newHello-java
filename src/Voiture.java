@@ -6,6 +6,7 @@ public class Voiture {
     int rapportCourant;
     int vitesse;
     Moteur moteur;
+    static int nbRoues=4;
 
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
     void klaxonner(){

@@ -229,7 +229,7 @@ public class Main {
         Ville destination=voitureDeMichel.transporter(passager, toulouse);
         System.out.println("L'illustre passager est arrivé à "+destination.nomVille);
 
-        Vaisseau vaisseau = new Vaisseau();
+        //Vaisseau vaisseau = new Vaisseau();
         Vaisseau nouveauVaisseau=new Vaisseau();
         nouveauVaisseau.type="Fregate";
         nouveauVaisseau.nbrePassagers=9;
@@ -241,6 +241,8 @@ public class Main {
 
         mars.accueillYrVaisseau(autreVaisseau);
 
+        System.out.println("Le nombre total d'humains ayant séjourné sur Mars est actuellement de "+mars.totalVisiteurs);
+
         //je peux redéfinir ici une propriété qui s'appliquera à toutes les instances :
         //Voiture.nbRoues=5;
 
@@ -250,6 +252,15 @@ public class Main {
         System.out.println("La forme de la planète Mars est "+mars.forme);
         System.out.println("La forme d'une planète est "+Planete.forme);
 
+        //retour cours - voiture -> méthode static
+        Voiture.klaxonner();
+        Voiture.tourner(true, 45);
+        //ceci une méthode déclarée static ne peut avoir accès aux attributs d'instance mais peut avoir aux propriétés static.
+        //la méthode rapport ne pourrait donc être static
+
+        //exercice expansion pour udemy
+        System.out.println(Planete.expansion(10.5));
+        System.out.println(Planete.expansion(14.2));
     }
 
 }

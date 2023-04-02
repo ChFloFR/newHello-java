@@ -9,7 +9,7 @@ public class Voiture {
     static int nbRoues=4;
 
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
-    void klaxonner(){
+    static void klaxonner(){
         System.out.println("tutut'");
     }
 
@@ -29,7 +29,7 @@ public class Voiture {
         }
         return rapportCourant;
     }
-    void tourner(boolean droite, int angle){
+    static void tourner(boolean droite, int angle){
         String droiteOuGauche=null;
         if (droite) {
             droiteOuGauche="droite";

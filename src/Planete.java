@@ -9,6 +9,11 @@ public class Planete {
     Vaisseau vaisseauActuellementAccoste;
     static String forme="Sphérique";
 
+    static int nbPlanetesDecouvertes = 0;
+
+    Planete(){
+        nbPlanetesDecouvertes++;
+    }
 
     public static void main(String... args) {
 

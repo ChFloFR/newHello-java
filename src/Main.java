@@ -103,6 +103,8 @@ public class Main {
         voitureDeMichel.couleur = "jaune";
         voitureDeMichel.nbPortes = 3;
         voitureDeMichel.automatic = true;
+        //changement de couleur
+        voitureDeMichel.couleur = "verte";
 
         System.out.println(voitureDeMichel.couleur);
         voitureDeMichel.klaxonner();
@@ -261,6 +263,10 @@ public class Main {
         //exercice expansion pour udemy
         System.out.println(Planete.expansion(10.5));
         System.out.println(Planete.expansion(14.2));
+
+        System.out.println(Planete.nbPlanetesDecouvertes);
+
+
     }
 
 }

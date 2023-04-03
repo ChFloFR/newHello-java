@@ -8,6 +8,27 @@ public class Voiture {
     Moteur moteur;
     static int nbRoues=4;
 
+
+    //constructeur par défaut (permet d'abord d'utiliser "new" dans le main par exemple
+
+    Voiture(){
+        System.out.println("une voiture est construite sans paramètre");
+        System.out.println("Une voiture est en cours de construction");
+
+    }
+
+    //ATTENTION SI UN CONSTRUCTEUR AVEC PARAMETRE EST EN PREMIER, LE CONSTRUCTEUR SANS PARAMETRE NE POURRA FONCTIONNER
+    //constructeur avec parametre couleur
+    Voiture (String couleur){
+        this.couleur=couleur;
+        System.out.println("voiture construite avec un paramètre, la couleur");
+    }
+
+    //constructeur avec paramètre porte
+    Voiture(short nbPortes){
+        this.nbPortes=nbPortes;
+        System.out.println("Une voiture est construite avec des portes");
+    };
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler
     static void klaxonner(){
         System.out.println("tutut'");

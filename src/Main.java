@@ -127,17 +127,17 @@ public class Main {
         System.out.println("Le dernier rapport enclenché est " + nouveauRapport);
 
         voitureDeMichel.tourner(false, 45);
-        Planete neptune = new Planete();
+        Planete neptune = new Planete("Neptune");
         neptune.nom = "Neptune";
         neptune.diametre = 49532;
         neptune.matiere = "Gazeuse";
 
-        Planete mars = new Planete();
+        Planete mars = new Planete("Mars");
         mars.nom = "Mars";
         mars.matiere = "tellurique";
         mars.diametre = 6792;
 
-        Planete venus = new Planete();
+        Planete venus = new Planete("Venus");
         venus.nom = "Venus";
 
         //appel de la méthode construite dans la class Planete
@@ -203,7 +203,7 @@ public class Main {
         System.out.println(voitureDeRoger.moteur.nbCylindres);
         System.out.println(voitureDeMichel.moteur.nbCylindres);
 
-        Planete Uranus = new Planete();
+        Planete Uranus = new Planete("Uranus");
 
         Atmosphere atmosphereUranus = new Atmosphere();
         atmosphereUranus.txHydrogene = 83;
@@ -266,6 +266,7 @@ public class Main {
 
         System.out.println(Planete.nbPlanetesDecouvertes);
 
+        System.out.println(voitureDeMichel.couleur);
 
     }
 

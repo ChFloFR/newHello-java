@@ -120,7 +120,7 @@ public class Planete {
 
     // cette méthode fusionne les deux précédentes
     Vaisseau accueillYrVaisseau(Vaisseau vaisseau) {
-        totalVisiteurs =totalVisiteurs+vaisseau.nbrePassagers;
+        totalVisiteurs =totalVisiteurs+vaisseau.nbPassagers;
         if (vaisseauActuellementAccoste == null) {
             System.out.println("Aucun vaisseau ne s'en va");
         }
@@ -132,13 +132,13 @@ public class Planete {
         return vaisseauPrecedent;
     }
 
-    Vaisseau vaisseau(String typeVaisseau, int nbrePassagers) {
+    Vaisseau vaisseau(String typeVaisseau, int nbPassagers) {
         if (typeVaisseau.equals("CHASSEUR")) {
-            nbrePassagers = 3;
+            nbPassagers = 3;
         } else if (typeVaisseau.equals("FREGATE")) {
-            nbrePassagers = 12;
+            nbPassagers = 12;
         } else if (typeVaisseau.equals("CROISEUR")) {
-            nbrePassagers = 50;
+            nbPassagers = 50;
         }
         return new Vaisseau();
     }

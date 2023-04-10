@@ -127,6 +127,8 @@ public class Main {
         System.out.println("Le dernier rapport enclenché est " + nouveauRapport);
 
         voitureDeMichel.tourner(false, 45);
+
+
         Planete neptune = new Planete("Neptune");
         neptune.nom = "Neptune";
         neptune.diametre = 49532;
@@ -234,12 +236,12 @@ public class Main {
         //Vaisseau vaisseau = new Vaisseau();
         Vaisseau nouveauVaisseau=new Vaisseau();
         nouveauVaisseau.type="Fregate";
-        nouveauVaisseau.nbrePassagers=9;
+        nouveauVaisseau.nbPassagers=9;
         mars.accueillYrVaisseau(nouveauVaisseau);
 
         Vaisseau autreVaisseau=new Vaisseau();
         autreVaisseau.type="Croiseur";
-        autreVaisseau.nbrePassagers=42;
+        autreVaisseau.nbPassagers=42;
 
         mars.accueillYrVaisseau(autreVaisseau);
 
@@ -268,6 +270,17 @@ public class Main {
 
         System.out.println(voitureDeMichel.couleur);
 
+        VaisseauDeGuerre Chasseur= new VaisseauDeGuerre();
+        Chasseur.blindage=156;
+        Chasseur.resistanceDuBouclier=2;
+
+        VaisseauCivil VaisseauMonde= new VaisseauCivil();
+        VaisseauMonde.blindage=4784;
+        VaisseauMonde.resistanceDuBouclier=30;
+        VaisseauMonde.activerBouclier();
+
+        Chasseur.attaque(VaisseauMonde, "VaisseauMonde", 3 );
+        VaisseauMonde.desactiverBouclier();
     }
 
 }

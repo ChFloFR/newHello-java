@@ -1,4 +1,5 @@
-public class Voiture {
+public class Voiture extends VehiculeAMoteur{
+    //avec extends, Voiture récupère les propriétés et méthodes de VéhiculeAMoteur
 //par convention, on range les attributs static d'abord
     static int nbRoues=4;
 
@@ -8,8 +9,7 @@ public class Voiture {
     //un booleen par défaut est à false
     boolean automatic;
     int rapportCourant;
-    int vitesse;
-    Moteur moteur;
+
     short nbSieges=4;
     short volumeCoffre;
 
@@ -55,11 +55,7 @@ public class Voiture {
     }
 
     //accelérer est aussi une méthode mais typée (int)
-    int accelerer(int vitesse){
-        System.out.println("J'accélère");
-        this.vitesse = this.vitesse+vitesse;
-        return this.vitesse;
-    }
+
 
     //nouvelle méthode typée avec paramètres
     int passerRapport(boolean augmenter){
@@ -84,8 +80,10 @@ public class Voiture {
     void tourner(String droiteOuGauche, int angle){
         System.out.println("La voiture va tourner à "+droiteOuGauche+" d'un angle de "+angle);
     }
+// ci-dessous, la méthode transporter de VéhiculeAMoteur (class mère)ne me convient pas totalement
+//donc je la reproduis ici avec ce qui me convient mieux (ici, juste changé véhicule pour voiture")
     Ville transporter(Passager passager, Ville villeDeDepart){
-        System.out.println("je transporte un passager qui s'appelle "+passager.prenom+" "+passager.nom);
+        System.out.println("La voiture transporte un passager qui s'appelle "+passager.prenom+" "+passager.nom);
         System.out.println("Le passager est parti de "+villeDeDepart.nomVille);
 
         Ville villeDestination=new Ville();

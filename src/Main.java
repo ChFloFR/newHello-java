@@ -270,17 +270,22 @@ public class Main {
 
         System.out.println(voitureDeMichel.couleur);
 
-        VaisseauDeGuerre Chasseur= new VaisseauDeGuerre();
-        Chasseur.blindage=156;
-        Chasseur.resistanceDuBouclier=2;
+        VaisseauDeGuerre chasseur= new VaisseauDeGuerre();
+        chasseur.blindage=156;
+        chasseur.resistanceDuBouclier=2;
+        chasseur.type="CHASSEUR";
 
         VaisseauCivil VaisseauMonde= new VaisseauCivil();
         VaisseauMonde.blindage=4784;
         VaisseauMonde.resistanceDuBouclier=30;
+        VaisseauMonde.type="VAISSEAU-MONDE";
         VaisseauMonde.activerBouclier();
+        chasseur.activerBouclier();
 
-        Chasseur.attaque(VaisseauMonde, "VaisseauMonde", 3 );
+        chasseur.attaque(VaisseauMonde, "laser photonique", 3 );
         VaisseauMonde.desactiverBouclier();
+        System.out.println("La résistance du bouclier du VaisseauMonde est de "+VaisseauMonde.resistanceDuBouclier);
+        System.out.println("Le blindage VM est" + VaisseauMonde.blindage);
     }
 
 }

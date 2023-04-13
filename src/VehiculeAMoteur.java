@@ -5,6 +5,16 @@ public class VehiculeAMoteur {
     int vitesse;
     Moteur moteur;
 
+    VehiculeAMoteur(){
+        System.out.println("Un véhicule à moteur est contruit");
+    }
+
+    //le constructeur ci-dessous est celui appelé dans le fichier Voiture.java ligne 20
+    VehiculeAMoteur(Moteur moteur){
+        this.moteur=moteur;
+        System.out.println("Une voiture est construite avec un moteur");
+    }
+
     int accelerer(int vitesse){
         System.out.println("J'accélère");
         this.vitesse = this.vitesse+vitesse;

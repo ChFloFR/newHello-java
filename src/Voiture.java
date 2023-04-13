@@ -17,6 +17,9 @@ public class Voiture extends VehiculeAMoteur{
 //par convention on range ensuite les constructeurs par nombre de paramètre
 
     //constructeur par défaut (permet d'abord d'utiliser "new" dans le main par exemple
+    Voiture(Moteur moteur){
+        super(moteur);
+    }
 
     Voiture(){
         System.out.println("une voiture est construite sans paramètre");
@@ -40,13 +43,15 @@ public class Voiture extends VehiculeAMoteur{
     // On ne peut avoir 2 constructeurs avec la même nature de paramètre (string, int etc)
     // Par contre on peut avoir des constructeurs de plusieurs paramètres
     // mais aussi un type comlexe comme une class - ici le moteur
-    Voiture(String couleur, short nbSieges, short volumeCoffre, Moteur moteur){
-        this.couleur=couleur;
-        this.nbSieges=nbSieges;
-        this.volumeCoffre=volumeCoffre;
-        this.moteur=moteur;
-        System.out.println("Contructeur avec 4 paramètres : la couleur, le nombre de sièges et le volume du coffre et son moteur");
-    }
+
+
+    //Voiture(String couleur, short nbSieges, short volumeCoffre, Moteur moteur){
+    //    this.couleur=couleur;
+    //    this.nbSieges=nbSieges;
+    //    this.volumeCoffre=volumeCoffre;
+    //    this.moteur=moteur;
+    //   System.out.println("Contructeur avec 4 paramètres : la couleur, le nombre de sièges et le volume du coffre et son moteur");
+    //}
 
     //par convention, on range les méthodes en dernier
     //klaxonner est une méthode propre à Voiture - on pourra l'appeler

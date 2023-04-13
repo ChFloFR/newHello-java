@@ -286,6 +286,17 @@ public class Main {
         VaisseauMonde.desactiverBouclier();
         System.out.println("La résistance du bouclier du VaisseauMonde est de "+VaisseauMonde.resistanceDuBouclier);
         System.out.println("Le blindage VM est" + VaisseauMonde.blindage);
+
+        //TRANSTYPAGE   - soit en créant en nouvelle variable de type Voiture ->ce qui se trouve dans les parenthèses.
+        Voiture voitureDeMichelSousFormeDeVoiture= (Voiture)voitureDeMichel;
+
+        // OU (et plus simple), sans créer une variable. On peut transtyper la variable à la volée
+        ((Voiture)voitureDeMichel).automatic=true;
+
+        //on peut effectivement accéder aux propriétés de la voiture.
+
+        //HERITAGE ET CONSTRUCTEUR
+        //une classe fille hérite de propriétés et méthodes du parent mais PAS du constructeur
     }
 
 }
